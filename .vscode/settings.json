@@ -1,7 +1,7 @@
 {
     //básicas de la extensión de AL
     "[al]": {
-        "editor.wordBasedSuggestions": true,
+        "editor.wordBasedSuggestions": "allDocuments",
         "editor.suggestSelection": "first",
         //es para los colores 
         "editor.bracketPairColorization.enabled": true,
@@ -9,7 +9,7 @@
     },
     //Valores del analyzer, que va a tener en cuenta en lo warnigs
     "al.codeAnalyzers": [
-        "${AppSourceCop}", // es para saber si nuestro código subiría a app source
+        //"${AppSourceCop}", // es para saber si nuestro código subiría a app source
         "${PerTenantExtensionCop}", // es cuando tú haces una extensión que estará en SAS
         "${CodeCop}", // analizador de código estándar
         "${UICop}" //Para hacer las propiedades mínimas para ejecutar tu desarrollo.
@@ -30,18 +30,17 @@
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
     //las de Waldo. Configuración de nombres de archivos y objetos
-    "CRS.ObjectNameSuffix": "",
+    "CRS.ObjectNamePrefix": "",
     //estructura para los nombres de los objetos
     "CRS.FileNamePattern": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
     "CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
     "CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
     "CRS.OnSaveAlFileAction": "Rename",
+    "al.rootNamespace": "Stripe.Lexidy",    
     //opción de autoformato
     "editor.formatOnSave": true,
     //Configuraciones de las traducciones
     "alTranslationCenter.general.customLanguageMapping": {
         "ESP": "es-ES_tradnl"
-    },
-    //ubicacion del ruleset. Sirve para eliminar Warnings y errores
-    "al.ruleSetPath": "./app.ruleset.json"
+    }
 }
